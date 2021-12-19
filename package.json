@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../../osa2/materiaali/notes-new && npm run build --prod && cp -r build ../../../osa3/notes-backend/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,13 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "nodemon": "^2.0.15"
   }
 }
